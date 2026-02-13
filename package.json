@@ -1,6 +1,6 @@
 {
   "name": "yamibo-theme",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "为百合会论坛提供主题切换、暗黑模式、沉浸式阅读模式",
   "type": "module",
   "scripts": {
