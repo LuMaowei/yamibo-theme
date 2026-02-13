@@ -1,0 +1,156 @@
+/*
+    背景颜色设为白色
+    html
+    一般弹窗
+    查看全部评分弹窗主体
+    查看全部评分弹窗合计行
+    顶部分类选项
+    作者、最后回复者悬浮卡片主体
+ */
+.theme-antd,
+.theme-antd .p_pop,
+.theme-antd body > #append_parent > #fwin_viewratings .m_c,
+.theme-antd body > #append_parent > #fwin_viewratings .m_c > .o,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #thread_types > li > a,
+.theme-antd .p_pop > .p_opt > div {
+  background: #fff !important;
+}
+
+/* 顶部导航栏背景颜色 */
+.theme-antd body > .oyheader > .header-stackup,
+.theme-antd body > #append_parent > #fwin_viewratings .m_c .f_c > .flb .flbc:hover,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #pgt > #fd_page_top > .pg > strong,
+.theme-antd body > #wp > .boardnav > #ct > .mn > .pgs > #fd_page_bottom > .pg > strong,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #thread_types > .xw1 > a,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #threadlist > .th {
+  background: #1677ff !important;
+}
+
+.theme-antd .p_pop *:hover {
+  background: #4096ff !important;
+}
+
+.theme-antd body > #wp > .boardnav > #ct > .mn > #threadlist > .bm_c > form > #threadlisttableid > tbody > tr:hover * {
+  background: #e6f4ff;
+}
+
+.theme-antd body > #wp > .boardnav > #ct > .mn > #threadlist > .bm_c > form > #threadlisttableid > tbody:nth-child(2n) {
+  background: #f5f5f5;
+}
+
+.theme-antd body,
+.theme-antd body > #wp > #pt,
+.theme-antd body > #wp > #ct > #postlist,
+.theme-antd body > #wp > #ct .pls,
+.theme-antd body > #wp > #ct > #postlist div > .plhin > tbody > tr > .plc > .pct > .pcb > .psth,
+.theme-antd body > #wp > #ct > #postlist div > .plhin > tbody > tr > .plc > .pct > .pcb > .psth > .icon_ring,
+.theme-antd body > #wp > #ct > #postlist div > .plhin > tbody > tr > .plc > .pct > .pcb > .rate *,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #pgt > .pgb > a,
+.theme-antd body > #wp > .boardnav > #ct > .mn > .pgs > .pgb > a,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #pgt > #fd_page_top > .pg *,
+.theme-antd body > #wp > .boardnav > #ct > .mn > .pgs > #fd_page_bottom > .pg *,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #threadlist,
+.theme-antd body > #wp > .boardnav > #ct > .mn > .bm_h,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #threadlist > .bm_c > form > #threadlisttableid > tbody,
+.theme-antd .p_pop > .p_opt > div > .o a {
+  background: transparent;
+}
+
+.theme-antd body > .oyheader > .header-stackup *,
+.theme-antd body > .oyheader > .header-stackup *:hover,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #thread_types > .xw1 > a,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #threadlist > .th *:hover {
+  color: #fff !important;
+}
+
+.theme-antd .p_pop *,
+.theme-antd .p_pop,
+.theme-antd body > #wp > #ct > #postlist,
+.theme-antd body > #wp > #ct .pls,
+.theme-antd body > #wp > #ct > #postlist > div,
+.theme-antd body > #wp > #ct > #postlist div > .plhin > tbody > tr > .plc > .pi,
+.theme-antd body > #wp > #ct > #postlist div > .plhin > tbody > tr > .plc > .pi strong a:hover,
+.theme-antd body > #wp > #ct > #postlist div > .plhin > tbody > tr > .plc > .pct > .pcb > .psth > .icon_ring,
+.theme-antd body > #wp > #ct > #postlist div > .plhin > tbody > tr > .plc > .pct > .pcb > .rate *,
+.theme-antd body > #append_parent > #fwin_viewratings .m_c .f_c > .c > .list,
+.theme-antd body > #append_parent > #fwin_viewratings .m_c .f_c > .c > .list > thead > tr > td,
+.theme-antd body > #append_parent > #fwin_viewratings .m_c .f_c > .c > .list > tbody > tr > td,
+.theme-antd body > #append_parent > #fwin_viewratings .m_c > .o,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #pgt > .pgb,
+.theme-antd body > #wp > .boardnav > #ct > .mn > .pgs > .pgb,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #pgt > #fd_page_top > .pg,
+.theme-antd body > #wp > .boardnav > #ct > .mn > .pgs > #fd_page_bottom > .pg,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #pgt > #fd_page_top > .pg *,
+.theme-antd body > #wp > .boardnav > #ct > .mn > .pgs > #fd_page_bottom > .pg *,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #thread_types,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #thread_types *,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #threadlist,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #threadlist > .th,
+.theme-antd body > #wp > .boardnav > #ct > .mn > .bm_h,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #threadlist > .bm_c > form > #threadlisttableid > tbody * {
+  border-color: #f0f0f0 !important;
+}
+
+/* 文字颜色 */
+.theme-antd body > #wp > #pt > .z *,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #threadlist > .bm_c > form > #threadlisttableid > tbody > tr em,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #threadlist > .bm_c > form > #threadlisttableid > tbody > tr em > a {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.theme-antd .p_pop *,
+.theme-antd body > #wp > #pt > .z > a:last-child,
+.theme-antd body > #wp > #ct > #postlist *:not(a),
+.theme-antd body > #append_parent > #fwin_viewratings .m_c .flb em,
+.theme-antd body > #append_parent > #fwin_viewratings .m_c * {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.theme-antd a,
+.theme-antd body > #wp > #ct > #postlist > table > tbody > tr > .plc > .ts > a,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #pgt > #fd_page_top > .pg *,
+.theme-antd body > #wp > .boardnav > #ct > .mn > .pgs > #fd_page_bottom > .pg *,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #thread_types * {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.theme-antd a:hover,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #threadlist > .bm_c > form > #threadlisttableid strong {
+  color: #1677ff !important;
+}
+
+.theme-antd .p_pop *:hover {
+  color: #fff !important;
+}
+
+/* 顶部背景及高度 */
+.theme-antd #hd > .wp {
+  background: transparent;
+  height: 32px;
+}
+
+/* 去除帖子操作、页脚、左侧楼层信息 */
+.theme-antd body > #wp > .boardnav > #ct > .mn > .pbn,
+.theme-antd body > #wp > .boardnav > #ct > .mn > .fl,
+.theme-antd #newspecial,
+.theme-antd #newspecialtmp,
+.theme-antd body > .oyheader > .header-stackup #avtnav,
+.theme-antd .oyheader > .header-stackup > .wp > .nvv,
+.theme-antd .wp > #header_logo,
+.theme-antd .wp > #scbar_form,
+.theme-antd body > #wp > #ct > #pgt,
+.theme-antd body > #wp > #ct > .pgs,
+.theme-antd body > #wp > #ct > #f_pst,
+.theme-antd body > #ft,
+.theme-antd body > #wp > #ct > #postlist > table > tbody > tr > .vwthd > .y,
+.theme-antd body > #wp > #ct > #postlist > table > tbody > tr > .vwthd > .xg1,
+.theme-antd body > #wp > #ct > #postlist > table > tbody > tr > .vwthd > #viewui_fontsize,
+.theme-antd body > #wp > #ct > #postlist div > .plhin > tbody > tr > .pls,
+.theme-antd body > #wp > #ct > #postlist div > .plhin > tbody > tr > .plc > .pi > #fj,
+.theme-antd body > #wp > #ct > #postlist div > .plhin > tbody > tr:nth-child(2),
+.theme-antd body > #wp > #ct > #postlist div > .plhin > tbody > tr:nth-child(4),
+.theme-antd body > #wp > #ct > #postlist div > .plhin > tbody > tr:nth-child(4),
+.theme-antd body > #wp > .boardnav > #ct > .mn > #f_pst,
+.theme-antd body > #wp > .boardnav > #ct > .mn > #threadlist > .bm_c > form > #threadlisttableid > #separatorline {
+  display: none !important;
+}

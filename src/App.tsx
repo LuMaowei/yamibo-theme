@@ -1,37 +1,33 @@
 import { useEffect, useState } from 'react';
+import { storage } from '@/utils/chromeStorage.ts';
+import { sendThemeEnableMessage } from '@/utils/chromeTabs.ts';
 import './App.css';
 
 function App() {
-  const [enabled, setEnabled] = useState(true);
+  const [themeEnable, setThemeEnable] = useState(true);
 
   useEffect(() => {
-    chrome.storage.sync.get(['themeEnabled'], (result: { themeEnabled: boolean }) => {
-      return setEnabled(result.themeEnabled ?? true);
-    });
+    init();
   }, []);
 
-  const handleToggle = (value: boolean) => {
-    setEnabled(value);
+  useEffect(() => {
+    sendThemeEnableMessage(themeEnable);
+  }, [themeEnable]);
 
-    // 存储状态
-    chrome.storage.sync.set({ themeEnabled: value });
-    chrome.storage.local.set({ themeEnabled: value });
+  async function init() {
+    const value = await storage.getThemeEnable();
+    setThemeEnable(value);
+  }
 
-    // 通知当前标签页
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      if (tabs[0]?.id) {
-        chrome.tabs.sendMessage(tabs[0].id, {
-          type: 'TOGGLE_THEME',
-          enabled: value,
-        });
-      }
-    });
-  };
+  async function handleToggleThemeEnable() {
+    await storage.setThemeEnable(!themeEnable);
+    init();
+  }
 
   return (
     <div style={{ padding: 16, width: 200 }}>
       <label style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-        <input type="checkbox" checked={enabled} onChange={(e) => handleToggle(e.target.checked)} />
+        <input type="checkbox" checked={themeEnable} onChange={handleToggleThemeEnable} />
         启用主题
       </label>
     </div>
