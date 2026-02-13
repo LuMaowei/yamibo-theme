@@ -1,4 +1,46 @@
-name: release.yml
+name: Build and Release Extension
+
 on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build extension
+        run: yarn build
+
+      - name: Read version from package.json
+        id: package_version
+        run: echo "VERSION=$(node -p \"require('./package.json').version\")" >> $GITHUB_OUTPUT
+
+      - name: Zip dist
+        run: |
+          cd dist
+          zip -r ../yamibo-theme-v${{ steps.package_version.outputs.VERSION }}.zip .
+
+      - name: Create Release and Upload Asset
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.package_version.outputs.VERSION }}
+          name: v${{ steps.package_version.outputs.VERSION }}
+          files: yamibo-theme-v${{ steps.package_version.outputs.VERSION }}.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
