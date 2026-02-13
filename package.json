@@ -1,13 +1,11 @@
 {
   "name": "yamibo-theme",
-  "private": true,
   "version": "0.0.1",
   "description": "为百合会论坛提供主题切换、暗黑模式、沉浸式阅读模式",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
     "preview": "vite preview",
     "format": "yarn biome check --write ."
   },

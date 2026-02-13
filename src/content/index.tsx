@@ -28,10 +28,8 @@ function applyTheme(enabled: boolean) {
 }
 
 // 页面加载时读取状态
-chrome.storage.local.get(['themeEnabled'], (result) => {
+chrome.storage.local.get(['themeEnabled'], (result: { themeEnabled: boolean }) => {
   const enabled = result.themeEnabled ?? true;
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
   applyTheme(enabled);
   const blocker = document.getElementById('theme-prevent-flash');
   if (blocker) {
